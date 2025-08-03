@@ -1,17 +1,12 @@
 # Wuhan-University Suspected Academic Misconduct Repository  
 ## (WHU-Misconduct-Evidence Repo – English Specification)
 [简体中文点击这里](README_ZH.md)
-0. Scope & Purpose  
+1. Scope & Purpose  
 This repository is dedicated exclusively to publicly available works (papers, monographs, reports, etc.) in which at least one author lists “Wuhan University / WHU” in the affiliation or correspondence address and for which academic-misconduct concerns (plagiarism, fabrication, image manipulation, duplicate publication, improper authorship, …​) have been raised.  
 Goals:  
 • Preserve verifiable evidence in an open format for independent examination.  
 • Improve academic governance at Wuhan University through transparency.  
 • Protect whistle-blowers while preventing unfounded accusations.
-
-1. Repository Name  
-Suggested GitHub name: `whu-academic-misconduct` or `whu-integrity-watch`.  
-First line of the main README:  
-> “This repository collects publicly verifiable evidence of alleged academic misconduct involving authors affiliated with Wuhan University (WHU).”
 
 2. Directory Layout  
 ```
