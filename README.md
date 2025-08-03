@@ -45,8 +45,9 @@ misconduct_type:            # choose: plagiarism / fabrication / image_manipulat
 ```
 
 4. Contribution Workflow  
-1) Fork → create feature branch → add `/cases/<DOI>/…` → open Pull Request.  
-2) PR template (WHU-specific checkboxes):  
+1) Fork → create feature branch → add `/cases/<DOI>/…` → open Pull Request.
+- Or work on your own repositories and add them as submodule
+3) PR template (WHU-specific checkboxes):  
    ☐ One or more authors are affiliated with Wuhan University and proof is attached.  
    ☐ All uploaded materials are legally redistributable or permission has been obtained.  
    ☐ Personal or sensitive data have been anonymized.  
