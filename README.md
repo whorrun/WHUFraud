@@ -1,83 +1,68 @@
-Proposed English Specification  
-Evidence & Documentation Repository for Suspected Academic Misconduct In WHU
-=====================================================================
+Wuhan-University Suspected Academic Misconduct Repository  
+(WHU-Misconduct-Evidence Repo – English Specification)
 
-1. Purpose  
-   • Provide an open, well-organized place to archive publicly verifiable materials related to alleged academic integrity problems.  
-   • Enable independent review and transparency while respecting legal, ethical and privacy constraints.  
-   • The project is strictly evidence-driven; no unsubstantiated claims or personal attacks are permitted.
+0. Scope & Purpose  
+This repository is dedicated exclusively to publicly available works (papers, monographs, reports, etc.) in which at least one author lists “Wuhan University / WHU” in the affiliation or correspondence address and for which academic-misconduct concerns (plagiarism, fabrication, image manipulation, duplicate publication, improper authorship, …​) have been raised.  
+Goals:  
+• Preserve verifiable evidence in an open format for independent examination.  
+• Improve academic governance at Wuhan University through transparency.  
+• Protect whistle-blowers while preventing unfounded accusations.
 
-2. Repository Structure  
+1. Repository Name  
+Suggested GitHub name: `whu-academic-misconduct` or `whu-integrity-watch`.  
+First line of the main README:  
+> “This repository collects publicly verifiable evidence of alleged academic misconduct involving authors affiliated with Wuhan University (WHU).”
+
+2. Directory Layout  
 ```
 /root
  ├── CODE_OF_CONDUCT.md
  ├── CONTRIBUTING.md
  ├── LICENSE
- ├── README.md
+ ├── README.md                # states “WHU-only scope”
  └── cases
-      └── <DOI>/
-           ├── README.md          <-- concise case summary
-           ├── metadata.yaml      <-- mandatory bibliographic info
-           ├── original/          <-- publisher-supplied files (PDF, XML, etc.)
-           ├── analysis/          <-- plagiarism or image-manipulation reports
-           └── evidence/          <-- screenshots, correspondence, archival links
+      └── <DOI>/              # replace “/” with “_”
+           ├── README.md      # ≤200-word case summary
+           ├── metadata.yaml  # bibliographic & WHU fields
+           ├── original/      # publisher PDFs, XML, etc.
+           ├── analysis/      # similarity or forensic reports
+           └── evidence/      # screenshots, e-mails, hashes
 ```
-• Folder name is the exact DOI with slashes replaced by underscores, e.g.  
-  `10.1234/abcd.2023.001` → `10.1234_abcd.2023.001`  
-• If a work lacks a DOI, use an official repository identifier (e.g. arXiv ID) or create a UUID and document the choice in `metadata.yaml`.
 
-3. Minimum File Requirements per Case  
-metadata.yaml   – YAML key/value pairs  
-```
+3. Mandatory metadata.yaml  
+```yaml
 doi: 10.1234/abcd.2023.001
 title: "Paper Title"
 authors:
-  - FamilyName, GivenName
+  - Zhang, San
+  - Li, Si
 journal: Journal Name
 year: 2023
 url: https://doi.org/10.1234/abcd.2023.001
 date_added: 2025-08-04
-submitter: GitHubUsername
+submitter: GitHubUserName
+whu_authors:                # at least one entry
+  - Zhang, San (School of Physics and Technology, Wuhan University)
+affiliation_proof:          # link(s) or file(s) that show WHU affiliation
+  - evidence/affil_screenshot.png
+misconduct_type:            # choose: plagiarism / fabrication / image_manipulation /
+                            #        duplicate_publication / authorship / other
 ```
-case README.md – Max 200 words: what the evidence purports to show and which policy it allegedly violates.  
-analysis/      – At least one machine-generated or human-written analysis file (e.g. a plagiarism similarity report).  
-evidence/      – Raw, unaltered files supporting the analysis: publisher PDFs, archived web pages (via Internet Archive), email headers, conference slides, etc.
 
 4. Contribution Workflow  
-1. Fork ➜ create feature branch ➜ add `/cases/<DOI>/…` ➜ pull request.  
-2. PR template forces checkboxes:  
-   ☐ All files are publicly redistributable; no copyright infringement.  
-   ☐ Personal data redacted unless already public.  
-   ☐ Evidence is complete, timestamped, and replicable.  
-3. Two maintainers must approve before merge.
+1) Fork → create feature branch → add `/cases/<DOI>/…` → open Pull Request.  
+2) PR template (WHU-specific checkboxes):  
+   ☐ One or more authors are affiliated with Wuhan University and proof is attached.  
+   ☐ All uploaded materials are legally redistributable or permission has been obtained.  
+   ☐ Personal or sensitive data have been anonymized.  
+3) A minimum of two maintainers (one versed in research-integrity standards) must approve before merge.
 
-5. Evidence Standards  
-• Verifiability: Provide the original source URL or archive hash (e.g. SHA-256).  
-• Completeness: Upload the whole document, not cropped screenshots, when licenses allow.  
-• Traceability: Keep all image or text comparisons reproducible (e.g. diff scripts, plagiarism report settings).  
-• Neutral Tone: Use factual language; avoid accusatory or defamatory wording.
+5. Evidence & Analysis Requirements  
+• Submission must contain explicit proof of WHU affiliation; otherwise it is rejected.  
+• All general evidence rules still apply: verifiable, complete, reproducible, neutral wording.  
+• Any comparison or forensic script (e.g., diff, image-manipulation detection) must be saved inside `analysis/` with environment notes.
 
 6. Legal & Ethical Compliance  
-• Content must comply with the laws of the repository host and applicable jurisdictions.  
-• No leaks of non-public personal data, medical records, or student records.  
-• Respect publisher licenses; link when redistribution is not permitted.  
-• Submitters retain copyright to their own analyses but license them under CC-BY-4.0 unless specified otherwise.
-
-7. Code of Conduct (see CODE_OF_CONDUCT.md)  
-• Be respectful, evidence-based, and free of harassment.  
-• Discussions focus on methodological rigor, not individuals’ character.
-
-8. Disclaimer  
-The repository maintainers do not state that wrongdoing has occurred; materials are provided solely to facilitate independent evaluation. Allegations remain allegations until validated by competent authorities.
-
-9. Recommended Tools (optional)  
-• Text overlap: iThenticate, Turnitin, VronPlag.  
-• Image forensics: ImageTwin, Forensically, doctored-image-detectors.  
-• Archiving: Internet Archive “Save Page Now,” perma.cc, SHA-256 hashing.  
-
-10. Licensing  
-• Repository documentation: CC-BY-4.0.  
-• Code snippets: MIT.  
-• Third-party PDFs: linked or included only if license permits redistribution; otherwise store hash + link.
-
-(End of specification)
+• Focus on documented actions, avoid personal attacks.  
+• Conform to PRC Civil Code regarding reputation rights and information-network dissemination.  
+• If publisher
