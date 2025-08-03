@@ -68,6 +68,9 @@ misconduct_type:        # 选项：plagiarism / fabrication / image_manipulation
 仓库维护者与贡献者仅提供材料与分析，未对事实作最终裁断。最终认定应由武汉大学学术道德委员会、期刊编辑部或其他有权机构完成。  
 
 9. 推荐工具
+・文本重复检测：iThenticate、Turnitin、VronPlag
+・图像取证：ImageTwin、Forensically
+・网页存档：archive.org的存档（目前看不太可能删论文也不太可能用得上）、perma.cc、SHA-256 哈希算法
 基本上没有什么推荐的方法快速查找到不是那么明显的学术漏洞，还恳请各领域的专家仔细查阅 
 
 11. 许可  
