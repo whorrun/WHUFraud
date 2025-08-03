@@ -1,5 +1,5 @@
-Wuhan-University Suspected Academic Misconduct Repository  
-(WHU-Misconduct-Evidence Repo – English Specification)
+# Wuhan-University Suspected Academic Misconduct Repository  
+## (WHU-Misconduct-Evidence Repo – English Specification)
 
 0. Scope & Purpose  
 This repository is dedicated exclusively to publicly available works (papers, monographs, reports, etc.) in which at least one author lists “Wuhan University / WHU” in the affiliation or correspondence address and for which academic-misconduct concerns (plagiarism, fabrication, image manipulation, duplicate publication, improper authorship, …​) have been raised.  
