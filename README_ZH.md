@@ -1,5 +1,5 @@
-武汉大学疑似学术不端证据共享仓库  
-（WHU-Misconduct-Evidence Repo – 中文规范）
+# 武汉大学疑似学术不端证据共享仓库  
+## （WHU-Misconduct-Evidence Repo – 中文规范）
 
 1. 定位  
 本仓库仅针对“署名单位或通信地址含『武汉大学』(Wuhan University, WHU)”的论文、专著、科研报告等公开作品所涉及的疑似学术不端行为（抄袭、伪造、篡改、重复发表、署名不当等）。其目的在于：  
