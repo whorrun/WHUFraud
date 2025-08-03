@@ -45,8 +45,9 @@ misconduct_type:        # 选项：plagiarism / fabrication / image_manipulation
 ```
 
 4. 提交流程  
-1) Fork → 分支 → 在 `/cases/<DOI>/` 添加文件 → Pull Request。  
-2) PR 模板新增武汉大学专用核对框，如果准备合并请先自查：  
+1) Fork → 分支 → 在 `/cases/<DOI>/` 添加文件 → Pull Request。
+   - 或者将自己的repository作为submodule加进来
+3) PR 模板新增武汉大学专用核对框，如果准备合并请先自查：  
    ☐ 该作品作者列表或通讯地址包含“Wuhan University”且已附截图；  
    ☐ 所附材料不侵犯版权或已获许可；  
    ☐ 已对私密信息做匿名化处理。  
