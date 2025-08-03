@@ -50,7 +50,6 @@ misconduct_type:            # choose: plagiarism / fabrication / image_manipulat
    ☐ One or more authors are affiliated with Wuhan University and proof is attached.  
    ☐ All uploaded materials are legally redistributable or permission has been obtained.  
    ☐ Personal or sensitive data have been anonymized.  
-3) A minimum of two maintainers (one versed in research-integrity standards) must approve before merge.
 
 5. Evidence & Analysis Requirements  
 • Submission must contain explicit proof of WHU affiliation; otherwise it is rejected.  
@@ -74,7 +73,9 @@ Maintainers and contributors provide materials and analyses without making final
 • Image forensics: ImageTwin, Forensically.  
 • Web archiving: Internet Archive “Save Page Now”, perma.cc, SHA-256 hashing.
 
-10. Licensing  
+There are basically no recommended methods to quickly find academic loopholes that are not so obvious, and we kindly ask experts in various fields to review them carefully.
+
+11. Licensing  
 • Repository documentation: CC-BY-4.0.  
 • Code snippets: MIT.  
 • Third-party publications: redistribute only if licensing permits; otherwise keep hash + link.
