@@ -57,7 +57,26 @@ misconduct_type:            # choose: plagiarism / fabrication / image_manipulat
 • All general evidence rules still apply: verifiable, complete, reproducible, neutral wording.  
 • Any comparison or forensic script (e.g., diff, image-manipulation detection) must be saved inside `analysis/` with environment notes.
 
+
 6. Legal & Ethical Compliance  
 • Focus on documented actions, avoid personal attacks.  
 • Conform to PRC Civil Code regarding reputation rights and information-network dissemination.  
-• If publisher
+• If publisher license forbids redistribution of full PDF, store only a SHA-256 hash plus the DOI/URL.
+
+7. Code of Conduct  
+See `CODE_OF_CONDUCT.md`. Key points: no insults, discrimination, or regional slurs; discussions must stay evidence- and method-focused.
+
+8. Disclaimer  
+Maintainers and contributors provide materials and analyses without making final judgments. Determinations of misconduct rest with the Wuhan University Academic Integrity Committee, journal editors, or other competent bodies.
+
+9. Recommended Tools (unchanged)  
+• Text overlap: iThenticate, Turnitin, VronPlag.  
+• Image forensics: ImageTwin, Forensically.  
+• Web archiving: Internet Archive “Save Page Now”, perma.cc, SHA-256 hashing.
+
+10. Licensing  
+• Repository documentation: CC-BY-4.0.  
+• Code snippets: MIT.  
+• Third-party publications: redistribute only if licensing permits; otherwise keep hash + link.
+
+(end of specification)
