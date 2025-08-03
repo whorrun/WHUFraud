@@ -1,15 +1,13 @@
 武汉大学疑似学术不端证据共享仓库  
 （WHU-Misconduct-Evidence Repo – 中文规范）
 
-0. 定位  
+1. 定位  
 本仓库仅针对“署名单位或通信地址含『武汉大学』(Wuhan University, WHU)”的论文、专著、科研报告等公开作品所涉及的疑似学术不端行为（抄袭、伪造、篡改、重复发表、署名不当等）。其目的在于：  
 • 以开放、可验证的方式保存证据，方便校内外独立复核；  
 • 借由透明度促进武汉大学改进学术治理；  
 • 保护举报人并避免失实指控。  
 
-1. 仓库命名  
-GitHub 建议仓库名：`whu-academic-misconduct` 或 `whu-integrity-watch`。README 首行明确：  
-> “This repository collects publicly verifiable evidence of alleged academic misconduct involving Wuhan University affiliated authors.”
+
 
 2. 目录结构  
 ```
