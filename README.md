@@ -48,7 +48,8 @@ whu_authors:                # at least one entry
 affiliation_proof:          # link(s) or file(s) that show WHU affiliation
   - evidence/affil_screenshot.png
 misconduct_type:            # choose: plagiarism / fabrication / image_manipulation /
-                            #        duplicate_publication / authorship / other
+  - duplicate_publication   #        duplicate_publication / authorship / other
+  - authorship
 ```  
 
 
