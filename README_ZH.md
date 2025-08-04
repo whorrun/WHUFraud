@@ -32,7 +32,7 @@
 ```yaml
 doi: 10.1234/abcd.2023.001  # 若未提供可设为null
 title: "论文标题"
-author:  # 若案例涉及多位作者，需全部列出，但仅在whu_authors字段中显示武汉大学所属作者
+authors:  # 若案例涉及多位作者，需全部列出，但仅在whu_authors字段中显示武汉大学所属作者
   - 张三（Zhang, San）
   - 王二（Wang, Er）
 advisor:
