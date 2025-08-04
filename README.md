@@ -4,6 +4,8 @@
 
 [简体中文点击这里](README_ZH.md)  
 
+# 目前暂时只接受学术造假证据收集与严重的学术失误(Fraud/Error)，暂停接受轻微学术失误问题(Slight Error or Oversight)
+
 ## 1. Scope & Purpose  
 
 This repository is dedicated exclusively to publicly available works (papers, monographs, reports, etc.) in which at least one author lists “Wuhan University / WHU” in the affiliation or correspondence address and for which academic-misconduct concerns (plagiarism, fabrication, image manipulation, duplicate publication, improper authorship, …) have been raised.  
