@@ -41,6 +41,7 @@ journal: 期刊名称
 year: 2023
 url: https://doi.org/10.1234/abcd.2023.001
 date_added: 2025-08-04
+submitter: 用户名 # 这个字段可为空，若为代提交则需标注原提交者
 whu_authors:                # 至少包含一项
   - 张三（Zhang, San）（武汉大学物理科学与技术学院）
 affiliation_proof:          # 证明武汉大学所属关系的链接或文件

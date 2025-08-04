@@ -42,6 +42,7 @@ journal: Journal Name
 year: 2023
 url: https://doi.org/10.1234/abcd.2023.001
 date_added: 2025-08-04
+submitter: UserName  # This field can be left blank; if submitting on behalf of someone else, please indicate the original submitter
 whu_authors:                # at least one entry
   - Zhang, San (School of Physics and Technology, Wuhan University)
 affiliation_proof:          # link(s) or file(s) that show WHU affiliation
