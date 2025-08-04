@@ -20,7 +20,7 @@ This repository is dedicated exclusively to publicly available works (papers, mo
  ├── LICENSE
  ├── README.md                # states “WHU-only scope”
  └── cases
-      └── whu_author-advisor-title/ # Use Chinese names and replace any special characters and "-" in the title with “_”. If there are multiple authors involved, use the first one.
+      └── whu_author_advisor_title/ # Use Chinese names and replace any special characters in the title with “_”. If there are multiple authors involved, use the first one.
            ├── README.md      # ≤200-word case summary
            ├── metadata.yaml  # bibliographic & WHU fields
            ├── original/      # publisher PDFs, XML, etc.
