@@ -16,4 +16,5 @@ affiliation_proof:      # 例如 PDF 第1页截图或出版社元数据链接
   - evidence/write.pdf
   - evidence/reasons.pdf
   - evidence/expamle.pdf
-misconduct_type:   fabrication     # 选项：plagiarism / fabrication / image_manipulation / duplicate_publication / authorship / other
+misconduct_type: 
+  -fabrication     # 选项：plagiarism / fabrication / image_manipulation / duplicate_publication / authorship / other
