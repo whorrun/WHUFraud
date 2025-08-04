@@ -4,7 +4,7 @@
 
 [简体中文点击这里](README_ZH.md)  
 
-# 目前暂时只接受学术造假证据收集(Fraud)，暂停接受学术失误问题(Error or Oversight)
+# 目前暂时只接受学术造假证据收集与严重的学术失误(Fraud/Error)，暂停接受轻微学术失误问题(Slight Error or Oversight)
 
 ## 1. Scope & Purpose  
 
