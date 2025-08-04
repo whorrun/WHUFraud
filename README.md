@@ -33,7 +33,7 @@ This repository is dedicated exclusively to publicly available works (papers, mo
 ```yaml
 doi: 10.1234/abcd.2023.001 # can be null if not provided
 title: "Paper Title"
-author: # If there is multiple author involved in some cases, list them all but only show the WHU-affiliated authors in the whu_authors field
+authors: # If there is multiple author involved in some cases, list them all but only show the WHU-affiliated authors in the whu_authors field
   - Zhang, San
   - Wang, Er
 advisor:
