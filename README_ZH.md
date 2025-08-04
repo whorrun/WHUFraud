@@ -47,7 +47,8 @@ whu_authors:                # 至少包含一项
 affiliation_proof:          # 证明武汉大学所属关系的链接或文件
   - evidence/affil_screenshot.png（证据/所属关系截图.png）
 misconduct_type:            # 选择：plagiarism（抄袭）/ fabrication（捏造）/ image_manipulation（图像篡改）/
-                            #        duplicate_publication（重复发表）/ authorship（署名问题）/ other（其他）
+  - plagiarism              #        duplicate_publication（重复发表）/ authorship（署名问题）/ other（其他）
+  - authorship              # 可多选
 ```  
 
 
