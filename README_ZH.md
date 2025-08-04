@@ -1,82 +1,93 @@
-# 武汉大学疑似学术不端证据共享仓库  
-## （WHU-Misconduct-Evidence Repo – 中文规范）
+# 武汉大学疑似学术不端证据库  
+（WHU-Misconduct-Evidence Repo – 中文说明）  
+[英文](README.md)
 
-1. 定位  
-本仓库仅针对“署名单位或通信地址含『武汉大学』(Wuhan University, WHU)”的论文、专著、科研报告等公开作品所涉及的疑似学术不端行为（抄袭、伪造、篡改、重复发表、署名不当等）。其目的在于：  
-• 以开放、可验证的方式保存证据，方便校内外独立复核；  
-• 借由透明度促进武汉大学改进学术治理；  
-• 保护举报人并避免失实指控。  
+## 1. 范围与目的  
+本仓库专门收录**公开可获取的作品**（论文、专著、报告等），其中至少有一位作者将“武汉大学（Wuhan University / WHU）”列为所属单位或通讯地址，且这些作品被质疑存在学术不端问题（抄袭、捏造、图像篡改、重复发表、署名不当等）。  
+
+### 目标：  
+- 以开放格式保存可验证的证据，供独立审查使用。  
+- 通过透明度提升武汉大学的学术治理水平。  
+- 保护举报者，同时防止无根据的指控。  
 
 
-
-2. 目录结构  
+## 2. 目录结构  
 ```
 /root
- ├── CODE_OF_CONDUCT.md
- ├── CONTRIBUTING.md
- ├── LICENSE
- ├── README.md               # 强调“仅限武汉大学相关作品”
- └── cases
-      └── <DOI>/             # 斜杠 → 下划线
-           ├── README.md     # 疑点概述（≤200 字）
-           ├── metadata.yaml # 文献信息 + 武大字段
-           ├── original/
-           ├── analysis/
-           └── evidence/
-```
+ ├── CODE_OF_CONDUCT.md（行为准则）
+ ├── CONTRIBUTING.md（贡献指南）
+ ├── LICENSE（许可证）
+ ├── README.md（说明文件）         # 明确“仅限武汉大学”的范围
+ └── cases（案例）
+      └── 作者（所属单位必须是武汉大学）-导师-标题/    # 使用中文姓名，标题中的特殊字符和“-”替换为“_”。若涉及多位作者，以第一作者为准。
+           ├── README.md         # ≤200字的案例摘要
+           ├── metadata.yaml     # 文献及武汉大学相关字段
+           ├── original/         # 出版商提供的PDF、XML等原文
+           ├── analysis/         # 相似度分析或 forensic 报告
+           └── evidence/         # 截图、邮件、哈希值等证据
+```  
 
-3. metadata.yaml 必填字段  
-```
-doi: 10.1234/abcd.2023.001
-title: "论文题目"
-authors:
-  - 张三
-  - 李四
+
+## 3. 强制元数据（metadata.yaml）  
+```yaml
+doi: 10.1234/abcd.2023.001  # 若未提供可设为null
+title: "论文标题"
+author:  # 若案例涉及多位作者，需全部列出，但仅在whu_authors字段中显示武汉大学所属作者
+  - 张三（Zhang, San）
+  - 王二（Wang, Er）
+advisor:
+  - 李四（Li, Si）
 journal: 期刊名称
 year: 2023
 url: https://doi.org/10.1234/abcd.2023.001
 date_added: 2025-08-04
-submitter: GitHub用户名
-whu_authors:            # 至少一人
-  - 张三 (School of Physics and Technology, Wuhan University)
-affiliation_proof:      # 例如 PDF 第1页截图或出版社元数据链接
-  - evidence/affil_screenshot.png
-misconduct_type:        # 选项：plagiarism / fabrication / image_manipulation / duplicate_publication / authorship / other
-```
+whu_authors:                # 至少包含一项
+  - 张三（Zhang, San）（武汉大学物理科学与技术学院）
+affiliation_proof:          # 证明武汉大学所属关系的链接或文件
+  - evidence/affil_screenshot.png（证据/所属关系截图.png）
+misconduct_type:            # 选择：plagiarism（抄袭）/ fabrication（捏造）/ image_manipulation（图像篡改）/
+                            #        duplicate_publication（重复发表）/ authorship（署名问题）/ other（其他）
+```  
 
-4. 提交流程  
-1) Fork → 分支 → 在 `/cases/<DOI>/` 添加文件 → Pull Request。
-   - 或者将自己的repository作为submodule加进来
-3) PR 模板新增武汉大学专用核对框，如果准备合并请先自查：  
-   ☐ 该作品作者列表或通讯地址包含“Wuhan University”且已附截图；  
-   ☐ 所附材料不侵犯版权或已获许可；  
-   ☐ 已对私密信息做匿名化处理。  
 
-5. 证据与分析要求  
-• 必须能直接证明作者与武汉大学关联，否则拒绝合并；  
-• 其他证据标准同上一版（可验证、完整、可追溯、中立措辞）；  
-• 所有比较脚本、图像取证脚本请存于 `analysis/` 并标注运行环境。  
+## 4. 贡献流程  
+1.  Fork（分叉仓库）→ 创建功能分支 → 添加`/cases/whu_作者-导师-标题/…`目录及内容 → 提交Pull Request（合并请求）。  
+   - 或在个人仓库中整理内容，通过子模块关联至本仓库  
+2. PR模板（武汉大学专属检查项）：  
+   - ☐ 至少一位作者隶属于武汉大学，且已附上证明材料。  
+   - ☐ 所有上传材料均合法可再分发，或已获得授权。  
+   - ☐ 个人或敏感数据已匿名化处理。  
 
-6. 法律与伦理  
-• 聚焦行为，不做人身攻击；  
-• 遵守《民法典》关于名誉权与信息网络传播权的规定；  
-• 如出版社不允许再分发 PDF，则上传 SHA-256 哈希等可以证明唯一性的证据，并提供 DOI 链接。  
 
-7. 行为准则  
-参见 `CODE_OF_CONDUCT.md`，重点条款：禁止侮辱、歧视、地域黑；讨论只基于证据与方法。  
+## 5. 证据与分析要求  
+- 提交内容必须包含武汉大学所属关系的明确证明，否则将被驳回。  
+- 需遵循所有通用证据规则：可验证、完整、可复现、表述中立。  
+- 任何对比或 forensic 脚本（如差异分析、图像篡改检测）必须保存在`analysis/`目录中，并附环境说明。  
 
-8. 免责声明  
-仓库维护者与贡献者仅提供材料与分析，未对事实作最终裁断。最终认定应由武汉大学学术道德委员会、期刊编辑部或其他有权机构完成。  
 
-9. 推荐工具
-・文本重复检测：iThenticate、Turnitin、VronPlag
-・图像取证：ImageTwin、Forensically
-・网页存档：archive.org的存档（目前看不太可能删论文也不太可能用得上）、perma.cc、SHA-256 哈希算法
-基本上没有什么推荐的方法快速查找到不是那么明显的学术漏洞，还恳请各领域的专家仔细查阅 
+## 6. 法律与伦理合规  
+- 聚焦有记录的行为，避免人身攻击。  
+- 遵守《中华人民共和国民法典》中关于名誉权和信息网络传播权的规定。  
+- 若出版商许可禁止全文PDF再分发，仅需存储SHA-256哈希值及DOI/URL。  
 
-11. 许可  
-• 仓库文档：CC-BY-4.0；  
-• 代码：MIT；  
-• 第三方文献遵循原版权。  
 
-（武汉大学疑似学术不端仓库规范完）
+## 7. 行为准则  
+详见`CODE_OF_CONDUCT.md`。核心要点：禁止侮辱、歧视或地域诽谤；讨论必须聚焦证据与方法。  
+
+
+## 8. 免责声明  
+维护者和贡献者仅提供材料与分析，不做最终判定。学术不端的认定权归武汉大学学术道德委员会、期刊编辑或其他主管机构。  
+
+
+## 9. 推荐工具  
+- 文本重复检测：iThenticate、Turnitin、VronPlag。  
+- 图像取证：ImageTwin、Forensically。  
+- 网页存档：互联网档案馆“即时存档”、perma.cc、SHA-256哈希校验。  
+
+目前尚无快速发现非显性学术漏洞的推荐方法，恳请各领域专家仔细审查。  
+
+
+## 10. 许可说明  
+- 仓库文档：CC-BY-4.0（知识共享署名4.0许可）。  
+- 代码片段：MIT许可。  
+- 第三方出版物：仅在许可允许时再分发；否则保留哈希值+链接。
